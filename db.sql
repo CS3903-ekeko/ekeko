@@ -1,0 +1,1 @@
+--(){ :; }; exec psql ekekodb -f "$0"
