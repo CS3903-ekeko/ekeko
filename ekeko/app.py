@@ -4,7 +4,8 @@ from flask import Flask
 
 from .database import connector
 
-db = connector.Manager
+db = connector.Manager()
+engine = db.createEngine()
 
 app = Flask(__name__)
 
