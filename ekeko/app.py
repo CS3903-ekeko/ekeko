@@ -59,6 +59,22 @@ def create_user():
 def order():
     pass
 
+@app.route("/market", methods=["POST"])
+def create_market():
+    c = loads(request.data)
+
+    market = entities.Market(
+        stock    = c["stock"],
+        currency = c["currency"]
+    )
+
+    db_session = db.getSession(engine)
+    db_session.add(market)
+    db_session.commit()
+    db_session.close()
+
+    return Response(dumps({"msg": "ok"}), status=201)
+
 @app.route("/market")
 def market():
     pass
