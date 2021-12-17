@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Ubuntu&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/acciones.css">    
+
+    
+    <script src="../static/js/libs/jquery-3.3.1.js"></script>
+    <script src="../static/js/libs/bootstrap.min.js"></script>
+
+    <title>Acciones</title>
+</head>
+<body>
+
+    <!-- Account -->
+    <section class="colored-section" id="title">
+        <div class="container-fluid">
+    
+          <!-- Nav Bar -->
+    
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="">Ekeko</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+              <ul class="navbar-nav ml-auto">                  
+                <li class="nav-item">
+                  <a class="nav-link navbar-brand" href="../html/register.html">Cuenta <i class="fas fa-user-tie"></i></a>
+                </li>
+              </ul>    
+            </div>
+          </nav>
+
+        </div>  
+    </section>
+
+    <!-- Market CTA -->
+    <section class="white-section" id="information-title">
+        <div class="container-fluid" id="initial-text">
+            <h1>Analice los mercados latinoamericanos</h1>
+        </div>
+    </section>
+
+    <!-- Wall Street widget -->
+    <section id="wall-street">
+        <div class="container-fluid" id="widget-wall">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container" style="margin: 0;">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols" = [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR/USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    }
+                    ],
+                    "showSymbolLogo" = true,
+                    "colorTheme" = "light",
+                    "isTransparent" = false,
+                    "displayMode" = "adaptive",
+                    "locale" = "es"
+                }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+    </section>
+
+    
+    <!-- Market Information -->
+    <section id="information">
+        
+        <h1 style="font-size: 2rem; color: white; margin-top: 4rem;">Acciones con fuertes cambios</h1>
+
+        <div class="container-fluid" id="widget-market-info">
+
+            <!-- TradingView Widget BEGIN -->
+            
+            <div class="tradingview-widget-container market-info">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                {
+                    "symbolsGroups" = [
+                        {
+                        "name": "Índices",
+                        "originalName": "Indices",
+                        "symbols": [
+                            {
+                            "name": "FOREXCOM:SPXUSD",
+                            "displayName": "S&P 500"
+                            },
+                            {
+                            "name": "FOREXCOM:NSXUSD",
+                            "displayName": "US 100"
+                            },
+                            {
+                            "name": "FOREXCOM:DJI",
+                            "displayName": "Dow 30"
+                            },
+                            {
+                            "name": "INDEX:NKY",
+                            "displayName": "Nikkei 225"
+                            },
+                            {
+                            "name": "INDEX:DEU40",
+                            "displayName": "DAX Index"
+                            },
+                            {
+                            "name": "FOREXCOM:UKXGBP",
+                            "displayName": "UK 100"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Futuros",
+                        "originalName": "Futures",
+                        "symbols": [
+                            {
+                            "name": "CME_MINI:ES1!",
+                            "displayName": "S&P 500"
+                            },
+                            {
+                            "name": "CME:6E1!",
+                            "displayName": "Euro"
+                            },
+                            {
+                            "name": "COMEX:GC1!",
+                            "displayName": "Gold"
+                            },
+                            {
+                            "name": "NYMEX:CL1!",
+                            "displayName": "Crude Oil"
+                            },
+                            {
+                            "name": "NYMEX:NG1!",
+                            "displayName": "Natural Gas"
+                            },
+                            {
+                            "name": "CBOT:ZC1!",
+                            "displayName": "Corn"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Bonos",
+                        "originalName": "Bonds",
+                        "symbols": [
+                            {
+                            "name": "CME:GE1!",
+                            "displayName": "Eurodollar"
+                            },
+                            {
+                            "name": "CBOT:ZB1!",
+                            "displayName": "T-Bond"
+                            },
+                            {
+                            "name": "CBOT:UB1!",
+                            "displayName": "Ultra T-Bond"
+                            },
+                            {
+                            "name": "EUREX:FGBL1!",
+                            "displayName": "Euro Bund"
+                            },
+                            {
+                            "name": "EUREX:FBTP1!",
+                            "displayName": "Euro BTP"
+                            },
+                            {
+                            "name": "EUREX:FGBM1!",
+                            "displayName": "Euro BOBL"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Forex",
+                        "originalName": "Forex",
+                        "symbols": [
+                            {
+                            "name": "FX:EURUSD"
+                            },
+                            {
+                            "name": "FX:GBPUSD"
+                            },
+                            {
+                            "name": "FX:USDJPY"
+                            },
+                            {
+                            "name": "FX:USDCHF"
+                            },
+                            {
+                            "name": "FX:AUDUSD"
+                            },
+                            {
+                            "name": "FX:USDCAD"
+                            }
+                        ]
+                        }
+                    ],
+                    "showSymbolLogo" = true,
+                    "colorTheme" = "dark",
+                    "locale" = "es"
+                }
+                
+                </script>
+            </div>
+            <!-- TradingView Widget END -->            
+
+        </div>
+    </section>
+
+    <!-- Interactive charter -->
+    <section class="white-section" id="interactiveCharter">
+        <div class="container-fluid" id="widget-dynamic-chart">
+
+            <h1 style="margin-bottom: 2rem;">Grafico interactivo</h1>
+    
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_80caa"></div>
+                <div class="tradingview-widget-copyright"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget(
+                    {
+                    "width": 980,
+                    "height": 610,
+                    "symbol": "BCS:LTM",
+                    "interval": "240",
+                    "timezone": "Etc/UTC",
+                    "theme": "dark",
+                    "style": "1",
+                    "locale": "es",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "watchlist": [
+                    "BCS:LTM",
+                    "BCS:SP_IPSA",
+                    "BCS:VAPORES",
+                    "BCS:CAP",
+                    "BCS:CENCOSUD"
+                    ],
+                    "details": true,
+                    "container_id": "tradingview_80caa"
+                }
+                    );
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+            
+        </div>
+
+    </section>
+    
+
+    <!-- Footer -->
+    <section class="white-section" id="footer">
+        <div class="container-fluid" style="background-color: rgb(14, 121, 209); color: white;">
+          <i class="footer-icon fab fa-twitter"></i>
+          <i class="footer-icon fab fa-facebook-f"></i>
+          <i class="footer-icon fab fa-instagram"></i>
+          <i class="footer-icon fas fa-envelope"></i>
+          <p class="footer-par">© Copyright 2021 Ekeko</p>
+        </div>
+      </section>
+
+
+</body>
+</html>

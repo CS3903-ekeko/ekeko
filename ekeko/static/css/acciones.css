@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: rgb(14, 121, 209);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#initial-text{
+    padding: 1%;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#widget-wall{
+    margin-top: 2%;
+    padding: 0;
+}
+
+.lema{
+    font-size: 1.5rem;
+}
+#information{
+    margin: 0 auto 0 auto;
+}
+
+.market-info{
+    margin: 0 auto 0 auto;
+}
+
+#widget-market-info{
+    padding: 2% 15%;
+}
+
+#widget-dynamic-chart{
+    padding: 5% 15%;
+}
+
+.colored-section{
+    background-color: #17D7A0;
+}
+.container-fluid{
+    padding: 7% 15%;
+}
+
+.navbar{
+    padding: 0 0 0rem;
+}
+.navbar-brand{
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 2rem;
+}
+.big-heading {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-family: 'Montserrat-Black', sans-serif;
+    font-weight: 900;
+}
+
+#title .container-fluid{
+    padding: 1% 15% 1%;
+    text-align: left;
+}
+
+.white-section{
+    background-color: snow;
+}
+
+.footer-icon{
+  padding: 2% 1%;
+}
