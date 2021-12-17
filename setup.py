@@ -18,6 +18,7 @@ setuptools.setup(
     ],
     install_requires=[
         "flask",
+        "SQLAlchemy",
     ],
     entry_points={
         "console_scripts": [

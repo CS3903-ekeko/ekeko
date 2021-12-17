@@ -2,6 +2,10 @@ from os import getenv
 
 from flask import Flask
 
+from .database import connector
+
+db = connector.Manager
+
 app = Flask(__name__)
 
 
