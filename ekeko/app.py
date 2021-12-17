@@ -1,8 +1,10 @@
 from os import getenv
+from json import loads, dumps
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, Response
 
 from .database import connector
+from .model import entities
 
 db = connector.Manager()
 engine = db.createEngine()
@@ -18,9 +20,21 @@ def get_index():
     return render_template('index.html')
 
 
-@app.route("/user")
-def user():
-    pass
+@app.route("/user", methods=["POST"])
+def create_user():
+    c = loads(request.data)
+
+    user = entities.Trader(
+        username = c["username"],
+        password = c["password"]
+    )
+
+    db_session = db.getSession(engine)
+    db_session.add(user)
+    db_session.commit()
+    db_session.close()
+
+    return Response(dumps({"msg": "ok"}), status=201)
 
 @app.route("/order")
 def order():
