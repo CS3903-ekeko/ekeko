@@ -25,3 +25,14 @@ class BuySellOrder(connector.Manager.Base):
     currency    = Column(Text, ForeignKey('market.currency'))
     price       = Column(REAL)
     amount      = Column(REAL)
+
+    def to_json_dict(self):
+        return {
+            "id"          : self.id ,
+            "trader_id"   : self.trader_id ,
+            "buy_or_sell" : self.buy_or_sell ,
+            "stock"       : self.stock ,
+            "currency"    : self.currency ,
+            "price"       : self.price ,
+            "amount"      : self.amount ,
+        }

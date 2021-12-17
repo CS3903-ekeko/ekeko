@@ -74,6 +74,23 @@ def put_order():
 
     return Response(dumps({"msg": "ok"}), status=201)
 
+@app.route("/order", methods=["GET"])
+def get_orders():
+    stock    = request.args.get("stock")
+    currency = request.args.get("currency")
+
+    db_session = db.getSession(engine)
+    orders = db_session.query(entities.BuySellOrder)
+
+    if stock is not None and currency is not None:
+        orders = orders.filter(entities.BuySellOrder.stock == stock).\
+            filter(entities.BuySellOrder.currency == currency)
+
+    db_session.close()
+    response = dumps([x.to_json_dict() for x in orders[:]])
+    return Response(response, mimetype="application/json")
+
+
 @app.route("/market", methods=["POST"])
 def create_market():
     c = loads(request.data)
