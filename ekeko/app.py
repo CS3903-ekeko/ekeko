@@ -1,8 +1,16 @@
 from os import getenv
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
+
+@app.route('/static/<content>')
+def static_content(content):
+    return render_template(content)
+
+@app.route('/', methods = ['GET'])
+def get_index():
+    return render_template('index.html')
 
 
 @app.route("/user")

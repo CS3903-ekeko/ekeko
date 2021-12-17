@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Ubuntu&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+  
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="../static/js/libs/jquery-3.3.1.js"></script>
+    <script src="../static/js/libs/bootstrap.min.js"></script>
+    <title>Ekeko</title>
+  </head>
+  <body>
+    <style>
+      body{
+          background-color: rgb(14, 121, 209);
+          text-align: center;
+          font-family: 'Montserrat', sans-serif;            
+      }
+      h1{
+        font-size: 6rem;
+        font-family: 'Montserrat-Black', sans-serif;
+        font-weight: 900;
+      }
+      h2{
+        padding: 0rem 0 2rem;
+        margin: 2rem 0 0;
+        font-family: 'Montserrat-Black', sans-serif;
+        font-weight: 900;
+      }
+      h3{
+        font-family: 'Montserrat-Black', sans-serif;
+        font-weight: 900;
+      }
+      .colored-section{
+        background-color: #17D7A0;
+      }
+      .container-fluid{
+        padding: 7% 15%;
+      }
+      #title .container-fluid{
+        padding: 3% 15% 9%;
+        text-align: left;
+      }
+      .navbar{
+        padding: 0 0 4.5rem;
+      }
+      .navbar-brand{
+        font-family: 'Ubuntu';
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .nav-item{
+        padding: 0 18px;
+      }
+      .nav-link{
+        font-size: 1.4rem;
+      }
+      .big-heading {
+        font-size: 3.5rem;
+        line-height: 1.5;
+        font-family: 'Montserrat-Black', sans-serif;
+        font-weight: 900;
+      }
+      .download-button {
+        margin: 5% 3% 5% 0;
+      }
+
+      /* Features Section */
+      #features {
+        position: relative;
+        z-index: 1;
+      }
+      .feature-title{
+        font-size: 1.5rem;
+      }
+      .features-box{
+        padding: 4.5%;
+      }
+      .feature-icon {
+        color: rgb(14, 121, 209);
+        font-size: 4rem;
+        padding-bottom: 15px;
+      }
+      .feature-icon:hover {
+        color: #17D7A0;
+      }
+
+      .title-image{
+        width: 75%;
+        margin-left: 50px;
+      }
+      .title-features{
+        margin-bottom: 2rem;
+      }
+      .banner-container{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 100px;
+      }
+      .title-secondary{
+        margin: 50px 0;
+      }
+
+      .latam-image{
+        width: 86%;
+        right: 25%;
+      }
+
+      .location-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: auto;
+        width: 100%;
+      }
+      .location-container .location-input{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex: 1;
+        font-size: 18px;
+        width: 100%;
+        height: 60px;
+        padding: 0 15px;
+        border-radius: 15px;
+        margin-right: 20px;
+        border: 2px solid;
+        max-width: 580px;
+        background-color: #fff;
+      }
+      input{
+        border: none;
+        appearance: none;
+        border-color: #fff;
+        background-color: #fff;
+        width: 100%;
+        outline: none;
+      }
+      .markets-section{
+        padding: 100px;
+      }
+      .section-heading{
+        font-size: 3.5rem;
+        line-height: 1.5;
+      }
+      .white-section{
+        background-color: snow;
+      }
+      .footer-icon{
+        padding: 2% 1%;
+      }
+      .footer-par{
+        color: #8f8f8f;
+      }
+    
+    </style>
+
+      <section class="colored-section" id="title">
+        <div class="container-fluid">
+    
+          <!-- Nav Bar -->
+    
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="">Ekeko</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../static/html/acciones.html">Acciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../static/html/noticias.html">Noticias</a>
+                </li>
+                  
+                <li class="nav-item">
+                  <a class="nav-link" href="../static/html/register.html">REGISTRO</a>
+                </li>
+
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="../static/html/login.html">Login</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#cta">Download</a>
+                </li>-->
+              </ul>
+    
+            </div>
+          </nav>
+    
+          <!-- Title -->
+          <div class="row">
+            <div class="col-lg-6">
+              <h1 class="big-heading">Haz que tu dinero comience a trabajar por ti</h1>
+              <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Descargar</button>
+              <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Descargar</button>
+            </div>
+            <div class="col-lg-6" class="div-image-ekeko">
+              <img class="title-image" src="../static/images/ekeko_main.jpg" alt="unknown image">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="white-section" id="features">
+        <div class="container-fluid">
+          <h2 style="font-size: 2.5rem; margin: 0;">La bolsa a tus manos</h2>    
+          <div class="row">
+            <div class="col-lg-4 features-box">
+              <i class="feature-icon far fa-thumbs-up"></i>
+              <h3 class="feature-title">Fácil y sencillo</h3>
+              <p>Comienza a operar en cuestión de minutos. Dile adiós a los tediosos trámites tradicionales</p>
+            </div>
+            <div class="col-lg-4 features-box">
+              <i class="feature-icon fas fa-tachometer-alt"></i>
+              <h3 class="feature-title">Rápido</h3>
+              <p>Analice y realice sus inversiones en tiempo real</p>
+            </div>
+            <div class="col-lg-4 features-box">
+              <i class="feature-icon fas fa-user-shield"></i>
+              <h3 class="feature-title">Seguro</h3>
+              <p class="features-par">Invierta con seguridad. Sus fondos están seguros con Ekeko</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features 2 -->
+      <section id="features2">
+        <div class="container-fluid">
+          <h2 style="font-size: 2.5rem; margin: 0; color: white;">0 comisiones y sin deposito</h2>
+          <h4 style="padding-bottom: 2rem; color: white;">Invierte desde US$50 en acciones de las bolsas de Latinoamérica sin pagar comisiones</h4>
+          <a class="btn btn-light btn-lg" href="../static/html/register.html" role="button">Empezar</a>         
+        </div>
+      </section>
+      
+      <!-- Features 3 -->
+      <section class="markets-section white-section" id="features3">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-6" style="text-align: left;">
+              <h2 class="big-heading" style="margin: 0; line-height: 1;">Opere en los mercados latinoamericanos</h2>
+              <h4>Ekeko permite la compra y venta de acciones en tiempo real en los mercados Latinoamericanos. Todo al alcance de sus manos!</h4>
+            </div>
+            <div class="col-lg-6" class="div-image-latam">
+              <img class="latam-image" src="../static/images/bolsasLatam.png" alt="unknown image">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="cta">
+        <div class="container-fluid">
+          <h3 class="big-heading" style="font-size: 2.5rem; margin: 0; color: white; margin-bottom: 2rem;">¡Descárgalo ahora!</h3>
+          <button type="button" class="btn btn-dark btn-lg" style="margin-right: 1rem;"><i class="fab fa-apple"></i> iOS</button>
+          <button type="button" class="btn btn-outline-light btn-lg" style="margin-left: 1rem;"><i class="fab fa-google-play"></i> Android</button>          
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section class="white-section" id="footer">
+        <div class="container-fluid">
+          <i class="footer-icon fab fa-twitter"></i>
+          <i class="footer-icon fab fa-facebook-f"></i>
+          <i class="footer-icon fab fa-instagram"></i>
+          <i class="footer-icon fas fa-envelope"></i>
+          <p class="footer-par">© Copyright 2021 Ekeko</p>
+        </div>
+      </section>
+
+  </body>
+</html>
