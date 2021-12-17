@@ -60,6 +60,7 @@ def put_order():
     c = loads(request.data)
 
     order = entities.BuySellOrder(
+        trader_id   = session["id"],
         buy_or_sell = c["buy_or_sell"],
         stock       = c["stock"],
         currency    = c["currency"],
