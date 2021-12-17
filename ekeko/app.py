@@ -75,8 +75,9 @@ def create_market():
 
     return Response(dumps({"msg": "ok"}), status=201)
 
-@app.route("/market")
-def market():
+@app.route("/market/<stock>/<currency>", methods=["GET"])
+def market(stock: str, currency: str):
+    # TODO: Return market template
     pass
 
 def main() -> None:
