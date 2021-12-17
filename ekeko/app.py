@@ -55,9 +55,24 @@ def create_user():
 
     return Response(dumps({"msg": "ok"}), status=201)
 
-@app.route("/order")
-def order():
-    pass
+@app.route("/order", methods=["POST"])
+def put_order():
+    c = loads(request.data)
+
+    order = entities.BuySellOrder(
+        buy_or_sell = c["buy_or_sell"],
+        stock       = c["stock"],
+        currency    = c["currency"],
+        price       = c["price"],
+        amount      = c["amount"],
+    )
+
+    db_session = db.getSession(engine)
+    db_session.add(order)
+    db_session.commit()
+    db_session.close()
+
+    return Response(dumps({"msg": "ok"}), status=201)
 
 @app.route("/market", methods=["POST"])
 def create_market():
