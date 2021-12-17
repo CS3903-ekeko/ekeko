@@ -1,7 +1,7 @@
 from os import getenv
 from json import loads, dumps
 
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request, Response, session
 
 from .database import connector
 from .model import entities
@@ -19,6 +19,25 @@ def static_content(content):
 def get_index():
     return render_template('index.html')
 
+@app.route('/authenticate', methods=['POST'])
+def authenticate():
+    body = loads(request.data)
+    username: str = body['username']
+    password: str = body['password']
+
+    db_session = db.getSession(engine)
+    users = db_session.query(entities.Trader).\
+        filter(entities.Trader.username == username)
+
+    db_session.close()
+    for i in users:
+        if (i.password == password):
+            session['id'] = i.id
+
+            response = {'msg': 'ok', 'id': i.id, 'username': username}
+            return Response(dumps(response), mimetype='application/json')
+
+    return Response('{"msg": "No"}', status=401, mimetype='application/json')
 
 @app.route("/user", methods=["POST"])
 def create_user():
